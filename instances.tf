@@ -31,7 +31,7 @@ resource "aws_instance" "Monitoring_node" {
 
 }
 
-output "toolserver_ip" {
+output "Monitoring_ip" {
   value       = aws_instance.Monitoring_node.private_ip
   description = "The URL of the server instance."
 }
