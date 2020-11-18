@@ -1,10 +1,5 @@
 #! /bin/bash
 sudo yum update -y
-sudo amazon-linux-extras install ansible2 -y
-sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
-sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
-sudo yum install jenkins --nogpgcheck -y
-sudo yum install java-1.8.0-openjdk-devel.x86_64 : OpenJDK Development Environment 8 -y
 sudo yum install docker -y
 sudo service docker start
 sudo usermod -aG docker $USER             

@@ -12,7 +12,7 @@
           "source_ami": "ami-03657b56516ab7912",     
           "instance_type": "t2.micro",
           "ssh_username": "ec2-user",
-          "ami_name": "tool_server_ami {{timestamp}}"
+          "ami_name": "monitor_server_ami {{timestamp}}"
         } 
         
       ],
@@ -25,7 +25,7 @@
             
         {
           "type": "shell",
-          "script": "tool_server_script.sh"
+          "script": "monitor_server_script.sh"
         }
     ]
     }

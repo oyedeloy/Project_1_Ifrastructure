@@ -8,10 +8,11 @@ services:
         - 9100:9100
       restart: always       
 
-  nginx:
-      image: nginx
-      container_name: nginx_1
+  redis:
+      image: redis
+      container_name: redis
       ports: 
         - 6379:6379
       restart: always
+      
 
