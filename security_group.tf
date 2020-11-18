@@ -13,7 +13,8 @@ resource "aws_security_group" "webserver_security" {
     to_port     = -1
     protocol    = "ICMP"
     cidr_blocks = ["0.0.0.0/0"]
-    
+  }
+
   ingress {
     from_port   = 80
     to_port     = 80
