@@ -73,7 +73,7 @@ output "app_server2_ip" {
 }
 
 resource "aws_instance" "redis1" {
-  ami                    = "ami-03db8dc5af07f71b9"
+  ami                    = "ami-0e44fdaf2a4d615a7"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet1.id
   key_name               = "devops-key2"
@@ -90,7 +90,7 @@ output "redis1_ip" {
 }
 
 resource "aws_instance" "redis2" {
-  ami                    = "ami-03db8dc5af07f71b9"
+  ami                    = "ami-0e44fdaf2a4d615a7"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet1.id
   key_name               = "devops-key2"
@@ -107,7 +107,7 @@ output "redis2_ip" {
 }
 
 resource "aws_instance" "redis3" {
-  ami                    = "ami-03db8dc5af07f71b9"
+  ami                    = "ami-0e44fdaf2a4d615a7"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet2.id
   key_name               = "devops-key2"
@@ -124,7 +124,7 @@ output "redis3_ip" {
 }
 
 resource "aws_instance" "redis4" {
-  ami                    = "ami-03db8dc5af07f71b9"
+  ami                    = "ami-0e44fdaf2a4d615a7"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet2.id
   key_name               = "devops-key2"
