@@ -38,7 +38,7 @@ output "Monitoring_ip" {
 
 
 resource "aws_instance" "app_server1" {
-  ami                    = "ami-06a06c53c4f70762e"
+  ami                    = "ami-0994cc38deeef17df"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet1.id
   key_name               = "devops-key2"
@@ -56,7 +56,7 @@ output "app_server1_ip" {
 }
 
 resource "aws_instance" "app_server2" {
-  ami                    = "ami-06a06c53c4f70762e"
+  ami                    = "ami-0994cc38deeef17df"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet2.id
   key_name               = "devops-key2"
