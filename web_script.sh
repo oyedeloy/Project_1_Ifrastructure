@@ -5,7 +5,7 @@ sudo service docker start
 sudo usermod -aG docker $USER             
 sudo systemctl enable docker
 sudo yum install git -y
-sudo yum install python-pip
-pip install docker-py
+sudo yum install python-pip -y
+pip install docker-py -y
 mkdir config
 mkdir/config/nginx
