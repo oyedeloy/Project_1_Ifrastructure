@@ -1,8 +1,9 @@
 {
-    "variables"
+    "variables": {
         "aws_access_key": "",
         "aws_secret_key": ""
       },
+
     "builders": [
         {
           "type": "amazon-ebs",
