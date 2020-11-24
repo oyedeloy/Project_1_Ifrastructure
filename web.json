@@ -1,5 +1,5 @@
 {
-    "variables": {
+    "variables"
         "aws_access_key": "",
         "aws_secret_key": ""
       },
@@ -17,12 +17,7 @@
         
       ],
     "provisioners": [
-        {
-          "type": "file",
-          "source": "/Users/oyede/Documents/Devops/workspace/Project_1_Ifrastructure/docker-compose.yml",
-          "destination": "/home/ec2-user/"
-        },
-            
+                    
         {
           "type": "shell",
           "script": "web_script.sh"
