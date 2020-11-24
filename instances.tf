@@ -1,6 +1,6 @@
 # Create EC2 instance
 resource "aws_instance" "webserver" {
-  ami                    = "ami-042de0a3c837ee90c"
+  ami                    = "ami-05a7feda58a4d7fd4"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
   key_name               = "devops-key2"
@@ -38,7 +38,7 @@ output "Monitoring_ip" {
 
 
 resource "aws_instance" "app_server1" {
-  ami                    = "ami-0994cc38deeef17df"
+  ami                    = "ami-07ca009d24d64cf9d"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet1.id
   key_name               = "devops-key2"
@@ -56,7 +56,7 @@ output "app_server1_ip" {
 }
 
 resource "aws_instance" "app_server2" {
-  ami                    = "ami-0994cc38deeef17df"
+  ami                    = "ami-07ca009d24d64cf9d"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet2.id
   key_name               = "devops-key2"
