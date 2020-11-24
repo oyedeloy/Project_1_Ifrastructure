@@ -8,4 +8,4 @@ sudo yum install git -y
 sudo yum install python-pip -y
 pip install docker-py 
 mkdir config
-mkdir/config/nginx
+mkdir config/nginx
