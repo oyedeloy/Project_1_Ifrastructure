@@ -124,7 +124,7 @@ output "redis3_ip" {
 }
 
 resource "aws_instance" "redis4" {
-  ami                    = "ami-095c1dc13c630f1fem"
+  ami                    = "ami-095c1dc13c630f1fe"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private_subnet2.id
   key_name               = "devops-key2"
@@ -141,7 +141,7 @@ output "redis4_ip" {
 }
 
 resource "aws_instance" "Infra_toolbox" {
-  ami                    = "ami-095c1dc13c630f1fem"
+  ami                    = "ami-095c1dc13c630f1fe"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
   key_name               = "devops-key2"
