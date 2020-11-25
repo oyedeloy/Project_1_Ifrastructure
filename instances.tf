@@ -141,8 +141,7 @@ output "redis4_ip" {
 }
 
 resource "aws_instance" "Infra_toolbox" {
-  ami                    = "ami-0570e008991181708
-"
+  ami                    = "ami-0570e008991181708"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
   key_name               = "devops-key2"
