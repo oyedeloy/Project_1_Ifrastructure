@@ -21,7 +21,7 @@ resource "aws_security_group" "webserver_security" {
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   ingress {
     from_port   = 9100
     to_port     = 9100
@@ -40,7 +40,7 @@ resource "aws_security_group" "webserver_security" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-} 
+}
 resource "aws_security_group" "monitor_Security" {
   name   = "monitor_sec"
   vpc_id = aws_vpc.My_VPC.id
@@ -56,7 +56,7 @@ resource "aws_security_group" "monitor_Security" {
     protocol    = "ICMP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-    
+
   ingress {
     from_port   = 3000
     to_port     = 3000
@@ -69,13 +69,13 @@ resource "aws_security_group" "monitor_Security" {
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-ingress {
+  ingress {
     from_port   = 9100
     to_port     = 9100
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   ingress {
     from_port   = 9115
     to_port     = 9115
@@ -89,32 +89,32 @@ ingress {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-  resource "aws_security_group" "private_sub_security" {
-    name   = "private_sec_group"
-    vpc_id = aws_vpc.My_VPC.id
+resource "aws_security_group" "private_sub_security" {
+  name   = "private_sec_group"
+  vpc_id = aws_vpc.My_VPC.id
   ingress {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "TCP"
-      cidr_blocks = ["0.0.0.0/0"]
-    }
-  ingress {
-      from_port   = 80
-      to_port     = 80
-      protocol    = "TCP"
-      cidr_blocks = ["0.0.0.0/0"]
-    }
-  ingress {
-      from_port   = -1
-      to_port     = -1
-      protocol    = "ICMP"
-      cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 22
+    to_port     = 22
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-      from_port   = 6379
-      to_port     = 6379
-      protocol    = "TCP"
-      cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = -1
+    to_port     = -1
+    protocol    = "ICMP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 6379
+    to_port     = 6379
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port   = 26379
@@ -128,14 +128,14 @@ ingress {
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  }
+}
 
 resource "aws_security_group" "Tool_box_Security" {
   name   = "Toolbox_sec"
@@ -158,7 +158,7 @@ resource "aws_security_group" "Tool_box_Security" {
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   egress {
     from_port   = 0
     to_port     = 0
