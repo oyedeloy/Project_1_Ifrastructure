@@ -6,5 +6,5 @@ sudo usermod -aG docker $USER
 sudo systemctl enable docker
 sudo yum install git -y
 sudo yum install python-pip -y
-pip install docker-py 
+sudo pip install docker-py 
 mkdir config

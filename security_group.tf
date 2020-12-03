@@ -105,6 +105,13 @@ resource "aws_security_group" "private_sub_security" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port   = -1
     to_port     = -1
     protocol    = "ICMP"
